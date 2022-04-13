@@ -1,0 +1,7 @@
+node_modules/
+.env
+.env.prod
+.DS_Store
+allTitles.txt
+titles/prod/*.txt
+!titles/prod/.keep

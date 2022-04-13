@@ -1,0 +1,28 @@
+image: ruby:2.6
+
+stages:
+  - staging
+  - deploy
+
+before_script:
+  - apt-get update
+  - apt-get install ruby-full -y
+  - gem install dpl
+
+staging:
+  stage: staging
+  only:
+    - branches
+  except:
+    refs:
+      - master
+  script:
+    - dpl --provider=heroku --app=lttmarkov-stageapp --api-key=$HEROKU_PROD
+
+deploy:
+  stage: deploy
+  only:
+    refs:
+      - master
+  script:
+    - dpl --provider=heroku --app=lttmarkov-prodapp --api-key=$HEROKU_PROD

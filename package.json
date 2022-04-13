@@ -1,0 +1,28 @@
+{
+  "name": "ltt-mkrv",
+  "version": "1.0.0",
+  "description": "Linus Tech Tips Markov Chain",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/plusreed/ltt-markov.git"
+  },
+  "scripts": {
+    "lint": "standard --verbose | snazzy",
+    "lint:fix": "standard --fix --verbose | snazzy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Reed Davenport <reed@plusreed.com> (https://plusreed.com)",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "markov-strings": "^2.1.0",
+    "twit": "^2.2.11"
+  },
+  "devDependencies": {
+    "axios": "^0.19.0",
+    "snazzy": "^8.0.0",
+    "standard": "^14.3.1"
+  }
+}
